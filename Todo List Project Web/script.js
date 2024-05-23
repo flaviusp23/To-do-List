@@ -165,3 +165,19 @@ function clearCompletedTasks() {
     }
 }
 
+function setColumnHeadings() {
+    const today = new Date();
+    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+
+    for (let i = 0; i < dayContainers.length; i++) {
+        const dayElement = dayContainers[i];
+        const day = new Date(today);
+        day.setDate(today.getDate() + i);
+        const dayId = dayElement.id;
+        const dayHeading = dayElement.querySelector('h3');
+        dayHeading.textContent = day.toLocaleDateString('en-US', options);
+    }
+}
+
+
+setColumnHeadings();

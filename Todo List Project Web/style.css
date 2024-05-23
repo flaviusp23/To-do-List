@@ -77,9 +77,8 @@ button:hover{
     flex: 1;
     min-width: 13%;
     margin: 5px;
-    padding: 10px;
     background-color: #F6F1F1;
-    border-radius: 10px;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
 }
@@ -87,14 +86,13 @@ button:hover{
 .day-container h3 {
     text-align: center;
     color: #146C94;
-    margin-bottom: 10px;
     font-size: 18px;
     border-bottom: 2px solid #146C94;
     padding-bottom: 10px;
     cursor: pointer; 
     background-color: #E4F2FA; 
     padding: 8px 16px; 
-    border-radius: 20px; 
+    border-radius: 15px; 
     transition: background-color 0.3s ease; 
 }
 
@@ -104,18 +102,19 @@ button:hover{
 
 ul li {
     font-size: 16px;
-    padding: 8px 8px 8px 40px;
-	border-radius: 18px;
+    padding: 8px 8px 14px 40px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
+    word-wrap: break-word; /* Add this line */
+    padding-right: 60px;
 }
 
 ul li:hover {
     font-size: 16px;
-    background-color: #adcddc;
-    border-radius: 18px;
+    background-color: #d0d8dc;
+    border-radius: 0px;
 }
 
 ul li::before {
@@ -130,10 +129,19 @@ ul li::before {
     top: 8px;
     left: 8px;
 }
-
+ul li.checked:first-child { 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+ul li.checked:last-child { 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 ul li.checked {
     color: #555;
     text-decoration: line-through;
+    background-color: #d0d8dc;
+    border-radius: 0px;
 }
 
 ul li.checked::before {
@@ -158,12 +166,15 @@ ul li .edit-button {
 }
 
 ul li span:hover {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .selected-day h3 {
-	outline: 1px solid #146C94;
-    border: 1px solid #146C94;
+    border-top: 3px solid #146C94;
+    border-bottom: 0px;
+}
+.selected-day{
+    border: 5px solid #146C94;
 }
 #todayDate{
 	color: #146C94;
