@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p id="todayDate"></p>
+      <div class="todo-app">
+        <h2>To-do list <img src="./Images/icon.png" /></h2>
+        <div class="row">
+          <input type="text" class="input-box" placeholder="Add your text" />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <div class="week-container">
+          <div class="day-container" id="monday">
+            <h3>Monday</h3>
+            <ul class="list-container"></ul>
+          </div>
+          <div class="day-container" id="tuesday">
+            <h3>Tuesday</h3>
+            <ul class="list-container"></ul>
+          </div>
+          <div class="day-container" id="wednesday">
+            <h3>Wednesday</h3>
+            <ul class="list-container"></ul>
+          </div>
+          <div class="day-container" id="thursday">
+            <h3>Thursday</h3>
+            <ul class="list-container"></ul>
+          </div>
+          <div class="day-container" id="friday">
+            <h3>Friday</h3>
+            <ul class="list-container"></ul>
+          </div>
+          <div class="day-container" id="saturday">
+            <h3>Saturday</h3>
+            <ul class="list-container"></ul>
+          </div>
+          <div class="day-container" id="sunday">
+            <h3>Sunday</h3>
+            <ul class="list-container"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="Button1">
+        <button id="allButton">All Tasks</button>
+        <button id="activeButton">All Active Tasks</button>
+        <button id="completedButton">All Complete Tasks</button>
+      </div>
+      <div class="Button1">
+        <button id="clearButton">Clear All Tasks</button>
+        <button id="clearcompletedButton">Clear Completed Tasks</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
